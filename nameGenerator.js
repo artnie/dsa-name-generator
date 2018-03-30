@@ -8,6 +8,12 @@
 // @grant        none
 // ==/UserScript==
 
+/*
+Examples:
+getNames/10, "diverses")
+getNames(15, "isdira")
+getNames(3, "garethi/albernia/weiblich")
+*/
 getNames = function (n, category){
     var names = [];
     for ( i = 0 ; i < n; i++) {
@@ -25,6 +31,10 @@ getNames = function (n, category){
     return names;
 };
 
+
+/*
+For examples see 'getNames'.
+*/
 downloadNames = function (n, category) {
     var names = getNames (n, category);
     names = names.reduce(function(e1, e2) {return e1 + "\n" + e2;});
